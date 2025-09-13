@@ -1,7 +1,5 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 import streamlit as st
 st.html("<h1 style='color:blue; font-size:45x;'>Score Prediction Based On Hours Of Study</h1>")
 df=pd.DataFrame(pd.read_csv("student_scores.csv"))
@@ -36,3 +34,4 @@ if st.button("Predict"):
     apoly=poly.transform([[a]])
     pred=model.predict(apoly)[0]
     st.success(f"Score: {pred}")
+
